@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PBVK - Home</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js" defer></script>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f4f4f9;
+            color: #333;
+        }
+        header {
+            background: #2b6777;
+            color: white;
+            padding: 15px 0;
+            text-align: center;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+        .logo img {
+            width: 80px;
+            height: auto;
+            border-radius: 5px;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+        nav ul li {
+            display: inline;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            transition: 0.3s;
+        }
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+        .hero {
+            text-align: center;
+            padding: 50px 20px;
+            background: linear-gradient(135deg, #c7f0f5, #e1eec3);
+        }
+        .hero h2 {
+            font-size: 32px;
+        }
+        .hero-slider img {
+            max-width: 70%;
+            height: 70%;
+            border-radius: 10px;
+        }
+        .cta-button {
+            display: inline-block;
+            margin-top: 12px;
+            margin-bottom: 20px;
+            padding: 12px 20px;
+            background: #2b6777;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+        .cta-button:hover {
+            background: #52ab98;
+        }
+        footer {
+            background: #222;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="image/logo.jpg" alt="PBVK Logo">
+                <h1>Nalanda Seva Trust (R)</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="aboutscl.html">About</a></li>
+                    <li><a href="admission.html">Admissions</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="faculties.html">Faculties</a></li>
+                    <li><a href="achievements.html">Achievements</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Welcome to Prajnabharathi Vidya Kendra</h2>
+            <p>Empowering students with quality education and strong values</p>
+            <a href="admission.html" class="cta-button">Join Us Today</a>
+        </div>
+        <div class="hero-slider">
+            <img src="image/background.jpg" alt="School Campus">
+            <img src="image\top view.jpg" alt="Students in Activity">
+            <img src="image\Scl teaching.jpg" alt="Classroom Session">
+        </div>
+    </section>
+    
+    <footer>
+        <p>&copy; 2024 Prajnabharathi Vidya Kendra | All Rights Reserved</p>
+    </footer>
+    
+    <script>
+        $(document).ready(function(){
+            let images = $('.hero-slider img');
+            let index = 0;
+            function slideShow() {
+                images.hide();
+                images.eq(index).fadeIn(1000);
+                index = (index + 1) % images.length;
+                setTimeout(slideShow, 3000);
+            }
+            slideShow();
+        });
+    </script>
+</body>
+</html>

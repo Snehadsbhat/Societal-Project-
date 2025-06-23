@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PBVK - Gallery</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        header {
+            background-color: #2b6777;
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+        header h1 {
+            margin: 10px 0;
+        }
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #2b3a67;
+        }
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .gallery-item {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s ease;
+        }
+        .gallery-item:hover {
+            transform: scale(1.03);
+        }
+        .gallery-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Prajnabharathi Vidya Kendra</h1>
+        <p>Explore memorable moments!</p>
+    </header>
+
+    <div class="container">
+        <h2>Photo Gallery</h2>
+        <div class="gallery-grid">
+            <div class="gallery-item"><img src="image/img1.jpg" alt="pic 1"></div>
+            <div class="gallery-item"><img src="image/img2.jpg" alt="pic 2"></div>
+            <div class="gallery-item"><img src="image/img3.jpg" alt="pic 3"></div>
+            <div class="gallery-item"><img src="image/img4.jpg" alt="pic 4"></div>
+            <div class="gallery-item"><img src="image/img5.jpg" alt="pic 5"></div>
+            <div class="gallery-item"><img src="image/img6.jpg" alt="pic 6"></div>
+            <div class="gallery-item"><img src="image/img7.jpg" alt="pic 7"></div>
+            <div class="gallery-item"><img src="image/img8.jpg" alt="pic 8"></div>
+            <div class="gallery-item"><img src="image/img9.jpg" alt="pic 9"></div>
+            <div class="gallery-item"><img src="image/img10.jpg" alt="pic 10"></div>
+            <div class="gallery-item"><img src="image/img11.jpg" alt="pic 11"></div>
+            <div class="gallery-item"><img src="image/img12.jpg" alt="pic 11"></div>
+            <div class="gallery-item"><img src="image/img13.jpg" alt="pic 11"></div>
+
+            <div class="gallery-item"><img src="image/img14.jpg" alt="pic 11"></div>
+
+
+        </div>
+    </div>
+
+</body>
+</html>

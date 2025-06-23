@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PBVK - Achievements</title>
+  <link rel="stylesheet" href="styles.css"/>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f4f4f9;
+      color: #333;
+    }
+    header {
+      background: #2b6777;
+      color: white;
+      padding: 15px 0;
+      text-align: center;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+    }
+    .logo img {
+      width: 80px;
+      height: auto;
+      border-radius: 5px;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      padding: 0;
+    }
+    nav ul li {
+      position: relative;
+    }
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+      padding: 10px;
+      display: block;
+    }
+    .dropdown {
+      display: none;
+      position: absolute;
+      background: white;
+      color: black;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      border-radius: 5px;
+      top: 40px;
+      left: 0;
+      width: 200px;
+      padding: 10px 0;
+      z-index: 1000;
+    }
+    .dropdown li {
+      display: block;
+      padding: 10px 20px;
+      text-align: left;
+    }
+    .dropdown li a {
+      color: black;
+      display: block;
+      width: 100%;
+      cursor: pointer;
+    }
+    .dropdown li a:hover {
+      background: #f1f1f1;
+    }
+    nav ul li:hover .dropdown {
+      display: block;
+    }
+
+    .achievements-section {
+      background: linear-gradient(135deg, #ddeaf6, #c7e6d5);
+      padding: 30px;
+      margin: 20px auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      max-width: 800px;
+    }
+    .achievements-section p {
+      font-size: 20px;
+      color: #2b3a67;
+      font-weight: bold;
+    }
+
+    .content-section {
+      display: none;
+      margin-top: 20px;
+      max-width: 800px;
+      width: 100%;
+    }
+
+    .content-section h2 {
+      text-align: center;
+      color: #2b6777;
+      margin-bottom: 20px;
+    }
+
+    .point {
+      background: white;
+      padding: 15px;
+      margin-bottom: 15px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      font-size: 16px;
+    }
+
+    .back-btn {
+      display: block;
+      background-color: #2b6777;
+      color: white;
+      padding: 10px 20px;
+      margin: 20px auto;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      text-align: center;
+    }
+
+    .back-btn:hover {
+      background-color: #1b4f5a;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="logo">
+        <img src="image/logo.jpg" alt="PBVK Logo" />
+        <h1>Prajnabharathi Vidya Kendra</h1>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="aboutscl.html">About</a></li>
+          <li><a href="admission.html">Admissions</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="faculties.html">Faculties</a></li>
+          <li>
+            <a href="#">Achievements ▼</a>
+            <ul class="dropdown">
+              <li><a href="#" onclick="showContent('academics')">Academics</a></li>
+              <li><a href="#" onclick="showContent('sports')">Sports</a></li>
+              <li><a href="#" onclick="showContent('extracurricular')">Extra Curricular</a></li>
+            </ul>
+          </li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="container">
+    <div class="achievements-section">
+      <p><strong>"Success is not the key to happiness. Happiness is the key to success. If you love what you are doing, you will be successful."</strong></p>
+      <p>Click on the dropdown to see details about Academics, Sports, and Extra Curricular Achievements.</p>
+    </div>
+
+    <!-- Academic Achievements -->
+    <div id="academics" class="content-section">
+      <h2>Academic Achievements</h2>
+      <div class="point">Our students represent the school at the district level every year in Pratibha Karanji competitions.</div>
+      <div class="point">In the 10th-grade annual exams, the school consistently achieves a 100% pass rate, with the highest recorded score of 623 out of 625.</div>
+      <div class="point">Every year, 5 to 6 students score more than 600 marks in the final exams.</div>
+      <div class="point">In 2016 and 2017, students represented the school at the state level in the INSPIRE Awards.</div>
+      <div class="point">Every year, a school annual day is organized with a dedicated theme.</div>
+      <div class="point">3 to 4 students receive free education annually.</div>
+      <button class="back-btn" onclick="goBack()">Go Back</button>
+    </div>
+
+    <!-- Sports Achievements -->
+    <div id="sports" class="content-section">
+      <h2>Sports Achievements</h2>
+      <div class="point">Our students consistently represent the school in chess at the district level.</div>
+      <div class="point">In the academic year 2019–20, six students represented the school in chess at the district level.</div>
+      <div class="point">Swagath Bhat of Grade 6 represented the school in chess at the district level in the current academic year.</div>
+      <div class="point">Nishchay from Grade 10 participated at the state level in shot put and secured 6th place.</div>
+      <div class="point">Abhijna M.M from Grade 7 represented the school in yoga at the district level.</div>
+      <button class="back-btn" onclick="goBack()">Go Back</button>
+    </div>
+
+    <!-- Extra Curricular Achievements -->
+    <div id="extracurricular" class="content-section">
+      <h2>Extra Curricular Achievements</h2>
+      <div class="point">A 10 km cleanliness and plastic eradication campaign was successfully conducted from Nittur to Sampekatte.</div>
+      <div class="point">Students participated in various exhibitions like history, science, literature, folk festivals, and food festivals.</div>
+      <div class="point">Aparna B.B of Grade 10 participated in the Karnataka State Literary Conference in 2019–20, and was elected as Taluk Literary Council President in 2018–19.</div>
+      <div class="point">Activities such as handwritten book creation, literary events, field visits, motivational classes, and summer camps deeply inspired students.</div>
+      <div class="point">Street plays focused on environmental awareness are conducted every year during Independence Day and Kannada Rajyotsava.</div>
+      <button class="back-btn" onclick="goBack()">Go Back</button>
+    </div>
+  </section>
+
+  <script>
+    function showContent(sectionId) {
+      $('.content-section').hide();
+      $('#' + sectionId).fadeIn();
+      $('.achievements-section').hide();
+    }
+
+    function goBack() {
+      $('.content-section').hide();
+      $('.achievements-section').fadeIn();
+    }
+  </script>
+</body>
+</html>
